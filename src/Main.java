@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Shape.main(new String[0]);
+        Triangle triangleObj = new Triangle(3,4,5);
+        Rectangle rectangleObj = new Rectangle(4, 4);
+
+        ShapeDescriber.describe(triangleObj);
+        ShapeDescriber.describe(rectangleObj);
     }
 }
