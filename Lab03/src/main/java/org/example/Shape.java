@@ -15,6 +15,10 @@ public abstract class Shape {
         );
     }
 
+    public String generateShape() {
+        return "Rendering is not implemented yet";
+    }
+
     void print() {
         String className = this.getClass().getName();
         System.out.println(className);

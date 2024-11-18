@@ -1,13 +1,23 @@
 package org.example;
 
 public class Rectangle extends Shape {
-    private final double width;
-    private final double height;
+    public final double width;
+    public final double height;
 
     public Rectangle(int width, int height, Color color) {
         super(color);
         this.width = width;
         this.height = height;
+    }
+
+    @Override
+    public String generateShape() {
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < height; i++) {
+            result.append("* ".repeat((int)width));
+            result.append("\n");
+        }
+        return result.toString();
     }
 
     @Override

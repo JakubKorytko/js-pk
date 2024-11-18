@@ -13,6 +13,21 @@ public class Triangle extends Shape {
     }
 
     @Override
+    public String generateShape() {
+        double max = Math.max(a, Math.max(b, c));
+        int height = (int) max;
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < height; i++) {
+            result.append(" ".repeat((height - i - 1)));
+            result.append("*".repeat(Math.max(0, (2 * i + 1))));
+            result.append("\n");
+        }
+
+        return result.toString();
+    }
+
+    @Override
     public double getArea() {
         double p = (a+b+c)/2.0;
         return Math.sqrt(p * (p-a) * (p-b) * (p-c));
