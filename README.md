@@ -14,4 +14,4 @@ oraz zrzut ekranu [Task2.png](./Task2.png)
 
 ### Zadanie 3
 
-Obecny stan repozytorium
+Folder [Lab01](./Lab01/)
