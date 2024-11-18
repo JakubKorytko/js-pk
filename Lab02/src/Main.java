@@ -2,7 +2,15 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Color green = new Color(0, 255, 0);
-        System.out.println(green);
+        Color randomColor = new Color(123, 222, 65,234);
+
+        System.out.println(randomColor);
+        //
+        System.out.print(randomColor.blue()+ ", ");
+        System.out.print(randomColor.green() + ", ");
+        System.out.print(randomColor.red()  + ", ");
+        System.out.print(randomColor.alpha()  + System.lineSeparator());
+        //
+        System.out.println(randomColor.toString());
     }
 }
