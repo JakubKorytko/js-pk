@@ -1,6 +1,5 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -11,7 +10,7 @@ public class Main {
         Color blue = new Color(0, 0, 255, 255);
         Color yellow = new Color(255, 255, 0, 255);
 
-        Triangle redTriangle =  new Triangle(5, 10,  5, red);
+        Triangle redTriangle =  new Triangle(7, 10,  5, red);
         Triangle yellowTriangle =  new Triangle(4, 8,  9, yellow);
 
         ShapeDescriber.describe(redTriangle);
