@@ -8,7 +8,7 @@
 
 [Commit
 3efb1cc](https://github.com/JakubKorytko/pwjj-pk/tree/3efb1cc32a498bdb97c89a3a129ad0a40ef844a4)
-oraz zrzut ekranu
+oraz zrzut ekranu\
 ![Task2.png](./Task2.png)
 
 ## Zadanie 3

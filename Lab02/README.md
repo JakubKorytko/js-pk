@@ -10,5 +10,5 @@
 
 ## Zadanie 3
 
-Obecny stan repozytorium oraz
+Obecny stan repozytorium oraz\
 ![Zrzut ekranu output.png](./output.png)
