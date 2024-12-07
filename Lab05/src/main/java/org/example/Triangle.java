@@ -1,18 +1,20 @@
 package org.example;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name="triangles")
 @Inheritance(strategy = InheritanceType.JOINED)
+@JsonTypeName("triangle")
 public class Triangle extends Shape {
 
     @Column(name="a", nullable = false)
-    private final double a;
+    public final double a;
     @Column(name="b", nullable = false)
-    private final double b;
+    public final double b;
     @Column(name="c", nullable = false)
-    private final double c;
+    public final double c;
 
     public Triangle(double a, double b, double c, Color color) {
         super(color);

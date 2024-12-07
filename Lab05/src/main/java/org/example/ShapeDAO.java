@@ -3,12 +3,18 @@ package org.example;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component("shapeDAO")
 public class ShapeDAO {
 
-    private final SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
+
+    public void setCustomSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     public ShapeDAO() {
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml");

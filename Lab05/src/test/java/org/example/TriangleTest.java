@@ -2,6 +2,8 @@ package org.example;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -9,10 +11,11 @@ import static org.mockito.Mockito.mock;
 class TriangleTest {
 
     Triangle obj;
+    Color color;
 
     @BeforeEach
     void setUp() {
-        Color color = mock(Color.class);
+        color = mock(Color.class);
         obj = new Triangle(3, 4, 5, color);
     }
 
@@ -25,6 +28,19 @@ class TriangleTest {
                 "  *****\n" +
                 " *******\n" +
                 "*********\n", shape);
+    }
+
+    @Test
+    void constructors() {
+        Triangle obj = new Triangle(3, 4, 5, color);
+        Triangle obj2 = new Triangle(3, 5, 4);
+        Triangle obj3 = new Triangle();
+
+        assertEquals(color, obj.color);
+        assertNull(obj2.color);
+        assertEquals(3.0, obj.a);
+        assertEquals(4.0, obj.b);
+        assertEquals(0, obj3.a);
     }
 
     @Test

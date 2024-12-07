@@ -22,6 +22,8 @@ class ShapeTest {
             super(color);
         }
 
+        DerivedClass() {super();}
+
         @Override
         public double getArea() {
             return 7.0;
@@ -76,6 +78,12 @@ class ShapeTest {
         derivedClass.print();
         assertEquals("org.example.ShapeTest$DerivedClass"
                 + System.lineSeparator(), outContent.toString());
+    }
+
+    @Test
+    void emptyConstructor() {
+        derivedClass = new DerivedClass();
+        assertNotNull(derivedClass.color);
     }
 
     @Test

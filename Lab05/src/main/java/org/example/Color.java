@@ -1,12 +1,15 @@
 package org.example;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name="colors")
 public class Color {
 
     @Id
+    @Getter @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -49,13 +52,5 @@ public class Color {
 
     public Color(int red, int green,  int blue) {
         this(red, green, blue, 0);
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getId() {
-        return id;
     }
 }

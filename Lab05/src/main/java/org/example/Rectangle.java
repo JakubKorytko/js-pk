@@ -1,11 +1,13 @@
 package org.example;
 
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import jakarta.persistence.*;
 
 @Entity
 @Table(name="rectangles")
 @Inheritance(strategy = InheritanceType.JOINED)
+@JsonTypeName("rectangle")
 public class Rectangle extends Shape {
 
     @Column(name="width", nullable = false)

@@ -1,16 +1,31 @@
 package org.example;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
 @Entity
 @Table(name = "shapes")
 @Inheritance(strategy = InheritanceType.JOINED)
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Rectangle.class, name = "rectangle"),
+        @JsonSubTypes.Type(value = Triangle.class, name = "triangle")
+})
 public abstract class Shape {
     @Id
+    @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
+    @Setter
     @JoinColumn(name="color_id")
     Color color;
 
@@ -42,15 +57,4 @@ public abstract class Shape {
     public abstract double getArea();
     public abstract double getPerimeter();
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    public Long getId() {
-        return id;
-    }
 }
