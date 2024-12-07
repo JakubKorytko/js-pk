@@ -5,3 +5,5 @@
 ## [Laboratorium 2](./Lab02/)
 
 ## [Laboratorium 3](./Lab03/)
+
+## [Laboratorium 4](./Lab04/)
