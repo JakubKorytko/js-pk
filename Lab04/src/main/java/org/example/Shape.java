@@ -41,4 +41,16 @@ public abstract class Shape {
 
     public abstract double getArea();
     public abstract double getPerimeter();
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
