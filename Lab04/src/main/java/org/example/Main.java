@@ -4,7 +4,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // Task 1 - 3
+
+        ShapeDAO shapeDAO = new ShapeDAO();
 
         Color red = new Color(255, 0, 0, 255);
         Color blue = new Color(0, 0, 255, 255);
@@ -12,21 +13,29 @@ public class Main {
 
         Triangle redTriangle =  new Triangle(7, 10,  5, red);
         Triangle yellowTriangle =  new Triangle(4, 8,  9, yellow);
-
-        ShapeDescriber.describe(redTriangle);
-        ShapeDescriber.describe(yellowTriangle);
-
         Rectangle blueRectangle = new Rectangle(5, 10, blue);
         Rectangle yellowRectangle = new Rectangle(10, 5, yellow);
 
-        ShapeDescriber.describe(blueRectangle);
-        ShapeDescriber.describe(yellowRectangle);
+        shapeDAO.saveShape(redTriangle);
+        shapeDAO.saveShape(yellowTriangle);
+        shapeDAO.saveShape(blueRectangle);
+        shapeDAO.saveShape(yellowRectangle);
 
-        System.out.println();
+        Shape fetchedShape = shapeDAO.getShapeById(1L);
 
-        // Task 4
+        if (fetchedShape != null) {
+            System.out.println(fetchedShape);
 
-        List<Shape> shapes = List.of(new Shape[]{redTriangle, yellowTriangle, blueRectangle, yellowRectangle});
-        ShapeRenderer.render(shapes);
+            fetchedShape.color = new Color(50, 50, 50, 255);
+            shapeDAO.updateShape(fetchedShape);
+
+            shapeDAO.deleteShape(1L);
+        }
+
+        List<Shape> shapes = shapeDAO.getAllShapes();
+        shapes.forEach(System.out::println);
+
+        shapeDAO.close();
+
     }
 }

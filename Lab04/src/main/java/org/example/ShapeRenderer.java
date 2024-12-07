@@ -10,7 +10,7 @@ import static com.diogonunes.jcolor.Attribute.TEXT_COLOR;
 public class ShapeRenderer {
 
     public static void render(Shape shape) {
-        Attribute textColor = TEXT_COLOR(shape.color.red(), shape.color.green(), shape.color.blue());
+        Attribute textColor = TEXT_COLOR(shape.color.red, shape.color.green, shape.color.blue);
         System.out.println(colorize(shape.generateShape(), textColor));
     }
 

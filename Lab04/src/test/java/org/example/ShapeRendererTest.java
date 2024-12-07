@@ -28,10 +28,10 @@ class ShapeRendererTest {
     private Color mockRed() {
         Color red = mock(Color.class);
 
-        when(red.blue()).thenReturn(0);
-        when(red.green()).thenReturn(0);
-        when(red.red()).thenReturn(255);
-        when(red.alpha()).thenReturn(255);
+        red.blue = 0;
+        red.green = 0;
+        red.red = 255;
+        red.alpha = 255;
 
         return red;
     }

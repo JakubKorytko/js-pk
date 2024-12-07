@@ -1,13 +1,26 @@
 package org.example;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="rectangles")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Rectangle extends Shape {
+
+    @Column(name="width", nullable = false)
     public final double width;
+    @Column(name="height", nullable = false)
     public final double height;
 
     public Rectangle(int width, int height, Color color) {
         super(color);
         this.width = width;
         this.height = height;
+    }
+
+    public Rectangle() {
+        this(0,0, null);
     }
 
     @Override

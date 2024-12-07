@@ -1,8 +1,17 @@
 package org.example;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="triangles")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Triangle extends Shape {
+
+    @Column(name="a", nullable = false)
     private final double a;
+    @Column(name="b", nullable = false)
     private final double b;
+    @Column(name="c", nullable = false)
     private final double c;
 
     public Triangle(double a, double b, double c, Color color) {
@@ -10,6 +19,14 @@ public class Triangle extends Shape {
         this.a = a;
         this.b = b;
         this.c = c;
+    }
+
+    public Triangle(double a, double b, double c) {
+        this(a, b, c, null);
+    }
+
+    public Triangle() {
+        this(0, 0, 0, null);
     }
 
     @Override
