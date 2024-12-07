@@ -1,4 +1,4 @@
-package org.example;
+package org.app.shapes;
 
 import org.junit.jupiter.api.*;
 
@@ -7,7 +7,6 @@ import java.io.PrintStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 class ShapeTest {
 
@@ -76,7 +75,7 @@ class ShapeTest {
     @Test
     void print() {
         derivedClass.print();
-        assertEquals("org.example.ShapeTest$DerivedClass"
+        assertEquals("org.app.shapes.ShapeTest$DerivedClass"
                 + System.lineSeparator(), outContent.toString());
     }
 

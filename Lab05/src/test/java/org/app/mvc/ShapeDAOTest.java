@@ -1,9 +1,10 @@
-package org.example;
+package org.app.mvc;
 
-import jakarta.transaction.Transactional;
+import org.app.shapes.Color;
+import org.app.shapes.Shape;
+import org.app.shapes.Triangle;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.*;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package org.example;
+package org.app.shapes;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

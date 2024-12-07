@@ -1,5 +1,7 @@
-package org.example;
+package org.app.mvc;
 
+import org.app.shapes.Color;
+import org.app.shapes.Shape;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

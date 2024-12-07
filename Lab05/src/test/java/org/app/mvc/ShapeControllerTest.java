@@ -1,6 +1,10 @@
-package org.example;
+package org.app.mvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.app.shapes.Color;
+import org.app.shapes.Rectangle;
+import org.app.shapes.Shape;
+import org.app.shapes.Triangle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

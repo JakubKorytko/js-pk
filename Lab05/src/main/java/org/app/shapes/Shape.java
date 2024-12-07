@@ -1,4 +1,4 @@
-package org.example;
+package org.app.shapes;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
@@ -27,9 +27,9 @@ public abstract class Shape {
     @ManyToOne
     @Setter
     @JoinColumn(name="color_id")
-    Color color;
+    public Color color;
 
-    Shape(Color color)  {
+    public Shape(Color color)  {
         this.color = color;
     };
 
@@ -37,7 +37,7 @@ public abstract class Shape {
         this.color = new Color();
     }
 
-    String getColorDescription() {
+    public String getColorDescription() {
         return ("Red: " + color.red
                 + ", Green: " + color.green
                 + ", Blue: " + color.blue
@@ -49,7 +49,7 @@ public abstract class Shape {
         return "Rendering is not implemented yet";
     }
 
-    void print() {
+    public void print() {
         String className = this.getClass().getName();
         System.out.println(className);
     }

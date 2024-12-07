@@ -1,9 +1,12 @@
-package org.example;
+package org.app.mvc;
 
+import org.app.shapes.Color;
+import org.app.shapes.Rectangle;
+import org.app.shapes.Shape;
+import org.app.shapes.Triangle;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.provider.NullSource;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;

@@ -1,4 +1,4 @@
-package org.example;
+package org.app.shapes;
 
 
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,7 @@ public class ShapeDescriberTest {
         ShapeDescriber.describe(mockedShape);
 
         verify(ShapeDescriber.logger).info("Red: 255, Green: 0, Blue: 0, Alpha: 255");
-        verify(ShapeDescriber.logger).info(argThat(argument -> argument.startsWith("Typ figury: org.example.")));
+        verify(ShapeDescriber.logger).info(argThat(argument -> argument.startsWith("Typ figury: org.app.")));
         verify(ShapeDescriber.logger).info("Pole figury: 4.0");
         verify(ShapeDescriber.logger).info("Obwód figury: 3.0");
     }

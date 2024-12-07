@@ -1,4 +1,4 @@
-package org.example;
+package org.app.shapes;
 
 import com.diogonunes.jcolor.Attribute;
 

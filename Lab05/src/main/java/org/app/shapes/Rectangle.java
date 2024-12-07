@@ -1,4 +1,4 @@
-package org.example;
+package org.app.shapes;
 
 
 import com.fasterxml.jackson.annotation.JsonTypeName;
